@@ -1,0 +1,15 @@
+spring:
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:data.sql
+  datasource:
+    driver-class-name: org.h2.Driver
+    url:jdbc:h2:mem: deep
+    username: sa
+    password:
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.H2Dialect
